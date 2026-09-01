@@ -205,6 +205,14 @@ class Library:
 
         selected_book.issue_book()
         selected_member.borrowed_books.append(selected_book)
+        def count_issued_books(self):
+          count = 0
+
+          for book in self.books:
+           if book.is_issued:
+            count += 1
+
+    print(f"Issued Books: {count}")
 
     # ---------------- RETURN BOOK ----------------
 
