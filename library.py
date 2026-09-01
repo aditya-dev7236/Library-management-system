@@ -1,3 +1,6 @@
+from itertools import count
+
+
 class Book:
 
     def __init__(self, book_id, title, author):
@@ -107,6 +110,15 @@ class Library:
 
     def total_books(self):
         print(f"Total Books: {len(self.books)}")
+
+    def total_available_books(self):
+     count = 0
+
+     for book in self.books:
+        if not book.is_issued:
+            count += 1
+
+    print(f"Available Books: {count}")    
 
     # ---------------- MEMBER METHODS ----------------
 
